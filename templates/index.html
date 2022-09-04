@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <Title>Welcome to Comparitor</Title>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+          </div>
+        </nav>
+    </header>
+    <h1>Welcome to The Comparitor</h1>
+    <br>
+    <h4>Framework: </h4>
+    <br>
+    <video autoplay="true"  id="videoElement" controls></video>
+    <br>
+    <button>Start Detection</button>
+    <br> 
+    <a href="">view in Django</a>
+    <script>
+
+        var video = document.querySelector("#videoElement");
+
+        if (navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+            video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+            console.log("Something went wrong!");
+            });
+        }
+    </script>
+</body>
