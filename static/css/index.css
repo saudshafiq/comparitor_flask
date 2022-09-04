@@ -8,7 +8,7 @@ header{
     background-color: aquamarine;
     text-underline-offset: none;
 }
-video{
+img{
     width: 480px;
     height: 360px;
     justify-self: center;

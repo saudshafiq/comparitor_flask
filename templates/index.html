@@ -20,23 +20,12 @@
     <br>
     <h4>Framework: </h4>
     <br>
-    <video autoplay="true"  id="videoElement" controls></video>
+    <img src="{{ url_for('video_feed') }}" width="100%">
     <br>
     <button>Start Detection</button>
     <br> 
     <a href="">view in Django</a>
     <script>
 
-        var video = document.querySelector("#videoElement");
-
-        if (navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function (stream) {
-            video.srcObject = stream;
-            })
-            .catch(function (err0r) {
-            console.log("Something went wrong!");
-            });
-        }
     </script>
 </body>
